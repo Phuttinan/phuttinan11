@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิศวกรรมวิชาการ ม.อุบลฯ</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #Home{
+        margin-bottom: 10px;
+        background-color: #000033;
+        line-height: 1.4;
+        font-size: 20px ;
+      }
+      #sliP{
+        border: 1px solid #ddd;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      #blog{
+        float: left;
+        width: 69%;
+        padding: 20px;
+      }
+      #sidebar {
+        float: right;
+        width: 22%;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      ul{
+        padding: 0;
+        list-style: none;
+      }
+      #footer {
+        background: #000033;
+        color: #fff;
+        padding: 10px;
+      }
+      .clr{
+        clear: both;
+      }
+      .typ-1{
+        font-size: 40px;
+      }
+      .typ-2{
+        font-size: 30px;
+      }
+      .typ-3{
+        font-size: 20px;
+      }
+
+
+
+      
+    </style>
+</head>
+<body>
+
+  <header id="header" class="cade">
+    <h1>
+      <img src="image/logo.jpg" alt="logo" width="100px" height="100px"  align=left hspace="10" vspace="10"/> 
+      <font face="JasmineUPC"> <font size="20">ชุมนุมวิศวกรรมวิชาการ</font>
+      <br> มหาวิทยาลัยอุบลราชธานี</font> <br clear=left>
+  </h1>
+  </header>
+  <main id="main">
+    <section id="Home" class="card">
+      <h1><font face="JasmineUPC" style="color:#FFFFFF ;">&nbsp;&nbsp;&nbsp;หน้าแรก</font></h1>
+    </section>
+
+    <section align="Center" id="sliP">
+      <img class="mySlides" src="image/im1.png" style="width:100%;">
+      <img class="mySlides" src="image/im4.png" style="width:100%">
+      <img class="mySlides" src="image/im5.png" style="width: 100%;"> 
+      <img class="mySlides" src="image/im6.png" style="width: 100%;">  
+
+      <a style="position:absolute;top:70%;left:0" onclick="plusDivs(-1)">❮</a>
+      <a style="position:absolute;top:70%;right:0" onclick="plusDivs(1)">❯</a>
+    </section> 
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1} 
+            x[slideIndex-1].style.display = "block"; 
+            setTimeout(carousel, 6000); 
+        }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+  </script>
+  <section id="video" align="Center">
+    <video controls autoplay width="50%" height="50%">
+      <source src="video/present.mp4" type="video/mp4">
+    </video>
+  </section>
+  <br>
+  <section id="blog" >
+    <h1 class="typ-1"><font face="JasmineUPC">บทความ</font></h1>
+    <article class="artical">
+      <h1 class="typ-2"><font face="JasmineUPC">ความเป็นมา</font></h1>
+      <p class="typ-3">
+        <font face="JasmineUPC">&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam laborum officiis ipsa? 
+        Architecto dolores optio doloribus in deleniti aliquid, a neque, tempora eveniet voluptate 
+        repellendus deserunt facere quisquam modi, nisi id non delectus veniam dolor voluptatibus 
+        suscipit dolore incidunt labore provident. Quasi incidunt soluta explicabo, voluptates doloribus officia voluptatum laudantium?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam laborum officiis ipsa? 
+        Architecto dolores optio doloribus in deleniti aliquid, a neque, tempora eveniet voluptate 
+        repellendus deserunt facere quisquam modi, nisi id non delectus veniam dolor voluptatibus 
+        suscipit dolore incidunt labore provident. Quasi incidunt soluta explicabo, voluptates doloribus officia voluptatum laudantium?
+        <a href="#">Click</a> </font>
+      </p>
+    </article>
+    <hr>
+  </section>
+  </main>
+  <br>
+  <aside id="sidebar" class="card">
+    <h1 class="typ-2"><font face="JasmineUPC">เมนู</font></h1>
+    <ul id="main-nav" class="typ-3">
+      <li><a href="#"><font face="JasmineUPC">ภาพกิจกรรม</font></a></li>
+      <li><a href="#"><font face="JasmineUPC">สมาชิกชุมนุม</font></a></li>
+      <li><a href="#"><font face="JasmineUPC">โครงการ</font></a></li>
+    </ul>
+    <hr />
+    <h1 class="typ-2"><font face="JasmineUPC">ติดต่อ</font></h1>
+    <ul class="typ-3">
+      <li><strong><font face="JasmineUPC">เบอร์โทรศัพท์</font></strong>
+        <br><font face="JasmineUPC">080-4780965</font></li>
+        <li><strong><font face="JasmineUPC">Facebook</font></strong>
+          <br><a href="https://www.facebook.com/Technical.en.ubu" target="_blank"><font face="JasmineUPC">ชุมนุมวิศวกรรมวิชาการ ม.อุบลฯ</font></a>
+    </ul>
+  </aside>
+  <br>
+  <div class="clr"></div>
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="text-center">Copyright &copy; KongRuksiam 2020</p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="w3-content" style="max-width:800px;position:relative">
+
+        <div class="w3-display-container mySlides">
+          <img src="image/im1.png" style="width:100%">
+        </div>
+        
+        <div class="w3-display-container mySlides">
+          <img src="image/im2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <img src="image/im3.jpg" style="width:100%">
+        </div>
+        
+        <a style="position:absolute;top:50%;left:0" onclick="plusDivs(-1)">❮</a>
+        <a style="position:absolute;top:50%;right:0" onclick="plusDivs(1)">❯</a>
+        
+    </section>
+        
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length} ;
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>
+        
+</body>
+</html>
